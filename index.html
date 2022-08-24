@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Agora Video Web SDK Quickstart</title>
+        <!--
+        This line is used to refer to the bundle.js file packaged by webpack. A sample webpack configuration is shown in the later step of running your app.
+        -->
+        <script src="./dist/bundle.js"></script>
+    </head>
+    <body style="background-color:cyan">
+        <h2 class="left-align" style="color:black; font-size: 32px">Agora Video Web SDK Quickstart</h2>
+        <div class="row">
+            <div>
+                <button type="button" id="join" style="font-size: 20px">JOIN</button>
+                <button type="button" id="leave" hidden="hidden" style="font-size: 20px">LEAVE</button>
+            </div>
+        </div>
+
+
+    <button type="button" id="showTopics" onclick="showTopics()" style="font-size: 32px;">Show topics</button>
+    <!-- Topics -->
+	<div name="topic" id="topicDiv" hidden="hidden" style="text-align: right;">
+		<select name="topics" id="topics" style=" width: 100%;
+   right: 100%;">
+		  <option value="Stand up">Stand up</option>
+		  <option value="Architecture Review">Architecture Review</option>
+		  <option value="Story points">Story point</option>
+		</select>
+	</div>
+
+
+<script type="text/javascript">
+	function showTopics() {
+		if (document.getElementById("showTopics").innerHTML == "Show topics") {
+			document.getElementById("topicDiv").hidden = "";
+			document.getElementById("showTopics").innerHTML = "Hide topics";
+		}
+		else {
+			document.getElementById("topicDiv").hidden = "hidden";
+			document.getElementById("showTopics").innerHTML = "Show topics";
+		}
+
+	}
+</script>
+    </body>
+</html>
